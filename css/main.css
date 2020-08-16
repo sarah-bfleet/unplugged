@@ -97,7 +97,12 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    color: #e2e3ed;
     text-align: left;
+
+   /**********NOT SURE 
+    margin-left: 20px;
+    ******************/
 }
  
 ul, 
@@ -106,13 +111,19 @@ ol {
 }
  
 a {
-    color: e2e3ed;
+    color: #e2e3ed;
     text-decoration: none;
+    /**
+    text-transform: uppercase; 
+    font-weight: bold;
+    font-size: 1.125em;
+    **/
 }
  
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-weight: 500;
 }
  
 h3, 
@@ -120,6 +131,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
   margin: 20px 0;
   font-size: 1.125em;
+  font-weight: 500;
 }
  
 p {
@@ -140,13 +152,9 @@ address {
    Base style-header and footer
    =========================================================================*/
 
-.content-wrapper {
-  width: 90%;
-  margin: 50px 0;
-}
-
 header,
 footer {
+    background-color: #202322;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,17 +174,21 @@ header .content-wrapper {
 }
 
 .header-divider {
+  background: #3a3a3a;
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
 }
 
 header nav {
+  width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
 }
 
 header nav ul {
@@ -185,7 +197,12 @@ header nav ul {
   width: 100%;
 }
 
+header nav ul li {
+  font-size: 1.125em;
+}
+
 footer {
+  text-align: center;
   flex-direction: column;
 }
 
@@ -218,25 +235,62 @@ footer .copyright {
   margin: 20px 0;
 }
 
-
 /* -------------------- Mobile Styles - Homepage -------------------- */
 
+/*************************Hero Area***********************************/
+
 .hero-area {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
-/* Aside */
+.hero-area h1 {
+    font-size: 2.25em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/*---------------------Aside/Button -Base Style --------------------------------------*/
 
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
 
-/* Features */
+
+aside .form {
+  margin-top: 30px;
+}
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+
+
+
+/***************** Features ******************************************/
 
 .features {
   display: flex;
@@ -264,9 +318,10 @@ aside {
   margin: 0;
 }
 
-/* Reviews */
+/*--------------------- Reviews ------------------------------------------------*/
 
 .reviews {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -274,6 +329,7 @@ aside {
 
 .reviews h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 
 .reviews h3 {
@@ -285,6 +341,7 @@ aside {
    ========================================================================== */
 
    .mission {
+    background-color: #527158;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,6 +349,7 @@ aside {
   }
   
   .contact-section {
+    background-color: #2a423a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,6 +365,7 @@ aside {
      ========================================================================== */
   
   .faq {
+    background-color: #527158;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,10 +382,15 @@ aside {
 
   .faq h2 {
     margin-bottom: 40px;
+    line-height: 1;
   }
   
   .faq-content {
     margin-bottom: 50px;
+  }
+
+  .faq-content h4 {
+      line-height: 1.333;
   }
 /* ==========================================================================
    Helper classes
