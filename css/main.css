@@ -256,12 +256,13 @@ footer .copyright {
 .hero-area {
   background: url('../img/hero.jpg') center no-repeat #333;
   background-size: cover;
+  background-position: center;
   min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
-
+  
 .hero-area h1 {
     font-size: 2.25em;
     font-family: 'Poppins', sans-serif;
@@ -279,9 +280,8 @@ aside {
   flex-flow: row wrap;
 }
 
-
-aside .form {
-  margin-top: 30px;
+aside .content-wrapper {
+  margin-top: 0;
 }
  
 input[type=text] {
@@ -337,6 +337,11 @@ input[type=button] {
 .features p {
   text-align: center;
   margin: 0;
+}
+
+.features i {
+	 font-size: 3.75em;
+   margin-bottom: 40px;
 }
 
 /*--------------------- Reviews ------------------------------------------------*/
