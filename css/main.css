@@ -240,9 +240,19 @@ footer .social-icons {
 }
 
 footer .social-icons p {
+    background: #527158;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+   /** border-radius: 100px; **/
+}
+
+.social-icons i {
+    /**padding: 10px;**/
+      font-size: 1.3125em;
 }
 
 footer .copyright {
