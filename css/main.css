@@ -452,7 +452,7 @@ input[type=button] {
   }
 
   .contact-content h4 {
-    margin-top: 0; /**not on solution**/
+    margin-top: 20 0; /**not on solution**/
   }
   
   /* ==========================================================================
@@ -780,7 +780,7 @@ input[type=button] {
 /* ==========================================================================
    FAQ Page
    ========================================================================== */
-   .faq .content-wrapper {
+.faq .content-wrapper {
     justify-content: space-between;
 }
 
@@ -796,6 +796,10 @@ input[type=button] {
 .faq p {
   font-size: .875em;
   line-height: 1.125;
+ }
+
+ .social h4 {
+   margin: 0 0 40px;
  }
 }
 
