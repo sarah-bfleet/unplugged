@@ -83,8 +83,10 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
+  /* ==========================================================================
+   
    Author's custom styles
+
    ========================================================================== */
 
    
@@ -104,22 +106,20 @@ body {
 ul, 
 ol {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
  
 a {
     color: #e2e3ed;
     text-decoration: none;
-    /**
-    text-transform: uppercase; 
-    font-weight: bold;
-    font-size: 1.125em;
-    **/
 }
  
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
   font-weight: 500;
+  margin: 0; 
 }
  
 h3, 
@@ -215,6 +215,7 @@ header nav ul li {
   font-size: 1.125em;
 }
 
+
 footer {
   text-align: center;
   flex-direction: column;
@@ -247,16 +248,18 @@ footer .social-icons p {
     display: flex;
     justify-content: center;
     align-items: center;
-   /** border-radius: 100px; **/
 }
 
 .social-icons i {
-    /**padding: 10px;**/
       font-size: 1.3125em;
 }
 
 footer .copyright {
   margin: 20px 0;
+}
+
+.contact h4 {
+  margin-top: 0;
 }
 
 /* -------------------- Mobile Styles - Homepage -------------------- */
@@ -278,6 +281,7 @@ footer .copyright {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     line-height: 1.2;
+    margin: 0; /**ask about this - not on solution**/
 }
 
 /*---------------------Aside/Button -Base Style --------------------------------------*/
@@ -290,8 +294,17 @@ aside {
   flex-flow: row wrap;
 }
 
+/**ask about the following 3 - not on solution**/
+
 aside .content-wrapper {
   margin-top: 0;
+}
+
+aside h3 {
+  margin: 20px 0 10px 0;
+}
+aside p {
+  margin: 0;
 }
  
 input[type=text] {
@@ -329,7 +342,7 @@ input[type=button] {
 }
 
 .features h2 {
-  margin-bottom: 60px;
+  margin: 0 0 40px; /**60px on solution**/
 }
 
 .features article {
@@ -344,15 +357,16 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
+.features i {
+	 font-size: 3.75em;
+   margin-bottom: 40px;
+}
+
 .features p {
   text-align: center;
   margin: 0;
 }
 
-.features i {
-	 font-size: 3.75em;
-   margin-bottom: 40px;
-}
 
 /*--------------------- Reviews ------------------------------------------------*/
 
@@ -363,6 +377,7 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
+/**not on solution code**/
 .reviews figure {
   width: 90%;
   display: flex;
@@ -372,13 +387,17 @@ input[type=button] {
 }
 
 .reviews h2 {
-  margin-bottom: 40px;
+  margin: 0 0 40px;
   line-height: 1;
 }
 
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
+}
+
+.reviews p {
+  margin-bottom: 0; /**not on solution**/
 }
 /* ==========================================================================
    About Page
@@ -390,6 +409,14 @@ input[type=button] {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+  }
+
+  .mission h2 {
+    margin: 0 0 25px;  /**not on solution**/
+  }
+
+  .mission-content p {
+    margin-bottom: 0; /**not on solution**/
   }
 
   .map figure {
@@ -416,8 +443,16 @@ input[type=button] {
     flex-flow: row wrap;
   }
 
+  .contact-section h2 {
+    margin: 0 0 25px; /**not on solution**/
+  }
+
   .contact-content p {
     margin: 0;
+  }
+
+  .contact-content h4 {
+    margin-top: 0; /**not on solution**/
   }
   
   /* ==========================================================================
@@ -441,8 +476,12 @@ input[type=button] {
   }
 
   .faq h2 {
-    margin-bottom: 40px;
+    margin: 0 0 40px;
     line-height: 1;
+  }
+
+  .faq p {
+    margin: 0; /**not on solution**/
   }
   
   .faq-content {
@@ -451,6 +490,7 @@ input[type=button] {
 
   .faq-content h4 {
       line-height: 1.333;
+      margin: 0 0 15px; /**not on solution**/
   }
 /* ==========================================================================
    Helper classes
@@ -534,9 +574,11 @@ input[type=button] {
   clear: both;
 }
 
-/* ==========================================================================
+/* ====================================
+======================================
      Media Queries - TABLET 
-   ========================================================================== */
+   =======================================
+   =================================== */
 
 @media only screen and (min-width: 768px) {
     /* General styles */
@@ -580,9 +622,12 @@ input[type=button] {
     justify-content: space-between;
   }
 
-  /**header nav li  {
-    padding: 0 20px;
-  }**/
+  /**not on solution**/
+  header nav li  {
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 0 10px;
+  }
 
   .header-divider {
       display: none;
@@ -614,6 +659,11 @@ input[type=button] {
       margin: 0;
   }
 
+  /**not on solution**/
+  .form-description h3, .form h3 {
+      margin: 0 0 10px;
+  }
+
   /* Features */
 
   .features h2 {
@@ -631,6 +681,12 @@ input[type=button] {
   .features .features-item-description {
       width: 62%;
   }
+
+  
+  .features i {
+    margin-bottom: 30px;
+  }
+  
 
   /* Reviews */
 
@@ -678,6 +734,13 @@ input[type=button] {
   footer p {
     line-height: 1.285;
   }
+
+  
+  footer .social-icons  {
+    width: 12.5em;
+    justify-content: space-between;
+  }
+  
 
   footer .copyright {
       width: 100%;
@@ -838,6 +901,7 @@ input[type=button] {
   .faq h2 {
     width: 100%;
     font-size: 3em;
+    margin-top: 60px;
   }
 
   .faq h4,
